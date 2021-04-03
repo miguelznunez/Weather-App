@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+   
+  <div class="container-1">
+    <div class="image">
+      <img id="img">
+    </div>
+    <div class="weather-details">
+      <h1><span id="degrees"></span></h1>
+      <h1 id= "bar" style="color: rgba(255, 255, 255, 0.6)"></h1>
+      <h1 id="city-name"></h1>
+    </div>
+    <div class="weather-details-2">
+      <p id='description'></p>
+    </div>
+  </div>
+  <div class="container-2">
+    <div class="arrow">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="input-box">
+      <input id="city-state" type="text" placeholder="City, State"><button onclick="loadWeather()">Search</button>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body{
+  /* background:linear-gradient(0.50turn,  white,#66c2ff,white); */
+  font-family: 'Comfortaa', cursive;
+}
+
+.container-1{
+  width: 95%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  width: 200px;
+}
+
+.image img{
+  width: 100%;
+}
+
+.weather-details{
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  color: white;
+  user-select: none;
+}
+
+.weather-details h1{
+  font-size: 4.5vw;
+  padding: 0 10px;
+}
+
+.container-2{
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+
+.weather-details-2 p{
+  display: none;
+  color: white;
+}
+
+.arrow{
+  position: absolute;
+  font-size: 1.5rem;
+  color: #66c2ff83;
+  -webkit-animation: action 1s infinite  alternate;
+  animation: action 1s infinite  alternate;
+}
+
+.input-box{
+  width: 350px;
+  margin: auto;
+  text-align: center;
+  opacity: 0;
+  transition: 1.5s;
+  z-index: 1;
+}
+
+.input-box:hover {
+  opacity: 1;
+}
+
+.input-box input{
+  width: 75%;
+  margin: auto;
+  outline: none;
+  padding: 8px 5px;
+  font-family: inherit;
+  border: 1px solid lightgray;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-box button{
+  font-family: inherit;
+  cursor: pointer;
+  padding: 8px;
+  width: fit-content;
+  color: inherit;
+  transition: 1s;
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
+  outline:none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 1s;
+}
+
+.input-box button:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@media(max-width: 768px){
+  .container-1{
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .image{
+    height: 150px;
+  }
+
+  .weather-details h1{
+    font-size: 6.5vw;
+  }
+
+  .weather-details-2 p{
+    display: block;
+  }
+
+}
+
+@media(max-width:480px){
+  .weather-details h1{
+    font-size: 6.8vw;
+  }
+
+  .input-box{
+    width: 100%;
+  }
+
+  .input-box input{
+    width: 60%;
+  }
+
+  .arrow{
+    font-size: 1rem;
+  }
+}
+
+@media(max-width:320px){
+  .weather-details h1{
+    font-size: 5.5vw;
+  }
+}
