@@ -34,7 +34,7 @@ function dayNightMode(){
   const date = new Date();
   const hour = date.getHours();
 
-  if(hour >= 7 && hour <= 19)
+  if(hour >= 7 && hour < 19)
     document.body.style.background = 'linear-gradient(0.50turn, white, #66c2ff, white)';
   else
     document.body.style.background = 'linear-gradient(0.50turn, black, #66c2ff, black)';
