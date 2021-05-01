@@ -2,6 +2,7 @@
 
 body{
   font-family: 'Comfortaa', cursive;
+  background-image: linear-gradient(0.50turn, white, #66c2ff, white);
 }
 
 .container-1{
@@ -14,11 +15,11 @@ body{
   align-items: center;
 }
 
-.image{
+.weather-img{
   width: 200px;
 }
 
-.image img{
+.weather-img img{
   width: 100%;
 }
 
@@ -35,6 +36,15 @@ body{
   padding: 0 10px;
 }
 
+.weather-details p{
+  display: none;
+  color: white;
+}
+
+#bar{
+  display: block;
+}
+
 .container-2{
   width: 95%;
   margin: auto;
@@ -43,11 +53,6 @@ body{
   justify-content: center;
   align-items: center;
   position:relative;
-}
-
-.weather-details-2 p{
-  display: none;
-  color: white;
 }
 
 .arrow{
@@ -105,6 +110,7 @@ body{
     0% { transform: translateY(0); }
     100% { transform: translateY(-10px); }
 }
+
 @keyframes action {
     0% { transform: translateY(0); }
     100% { transform: translateY(-10px); }
@@ -116,22 +122,33 @@ body{
     flex-direction: column;
   }
 
-  .image{
+  .weather-img{
     height: 150px;
   }
 
-  .weather-details h1{
-    font-size: 6.5vw;
+  .weather-details{
+    flex-direction: column;
+    margin-top: 5px;
   }
 
-  .weather-details-2 p{
+  .weather-details h1{
+    font-size: 7.5vw;
+    margin: 5px;
+  }
+
+  .weather-details p{
     display: block;
+    margin: 5px;
+  }
+
+  #bar{
+    display: none;
   }
 
 }
 
 @media(max-width:480px){
-  .weather-details h1{
+  .weather-details-1 h1{
     font-size: 6.8vw;
   }
 
