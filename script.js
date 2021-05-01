@@ -42,18 +42,19 @@ function dayNightMode(){
 
 function setImage(data){
   if(data.weather[0].main === "Clear"){
-    document.getElementById("img").src = "01d.svg";
+    document.getElementById("img").src = "sun.svg";
   }
+
   if(data.weather[0].main === "Snow"){
-    document.getElementById("img").src = "13d.svg";
+    document.getElementById("img").src = "snow.svg";
   }
+
   if(data.weather[0].main === "Thunderstorm"){
-    document.getElementById("img").src = "11d.svg";
+    document.getElementById("img").src = "thunderstorm.svg";
   }
-  if(data.weather[0].main === "Drizzle"){
-    document.getElementById("img").src = "09d.svg";
-  }
-  if(data.weather[0].main === "Mist" ||
+
+  if(data.weather[0].main === "Drizzle" || 
+    data.weather[0].main === "Mist" ||
     data.weather[0].main === "Smoke" ||
     data.weather[0].main === "Haze" ||
     data.weather[0].main === "Dust" ||
@@ -63,39 +64,19 @@ function setImage(data){
     data.weather[0].main === "Ash" ||
     data.weather[0].main === "Squall" ||
     data.weather[0].main === "Tornado"){
-      document.getElementById("img").src = "50d.svg";
+      document.getElementById("img").src = "drizzle.svg";
   }
+
   if(data.weather[0].main === "Clouds"){
     if(data.weather[0].description === "few clouds")
-      document.getElementById("img").src = "02d.svg";
-    if(data.weather[0].description === "scattered clouds")
-      document.getElementById("img").src = "03d.svg";
-    if(data.weather[0].description === "broken clouds")
-      document.getElementById("img").src = "04d.svg";
-    if(data.weather[0].description === "overcast clouds")
-      document.getElementById("img").src = "04d.svg";
+      document.getElementById("img").src = "few_clouds.svg";
+    else
+      document.getElementById("img").src = "overcast_clouds.svg";
   }
+
   if(data.weather[0].main === "Rain"){
-    if(data.weather[0].description === "light rain")
-      document.getElementById("img").src = "10d.svg";
-    if(data.weather[0].description === "moderate rain")
-      document.getElementById("img").src = "10d.svg";
-    if(data.weather[0].description === "heavy intensity rain")
-      document.getElementById("img").src = "10d.svg";
-    if(data.weather[0].description === "very heavy rain")
-      document.getElementById("img").src = "10d.svg";
-    if(data.weather[0].description === "extreme rain")
-      document.getElementById("img").src = "10d.svg";
-    if(data.weather[0].description === "freezing rain")
-      document.getElementById("img").src = "13d.svg";
-    if(data.weather[0].description === "light intensity shower rain")
-      document.getElementById("img").src = "09d.svg";
-    if(data.weather[0].description === "shower rain")
-      document.getElementById("img").src = "09d.svg";
-    if(data.weather[0].description === "heavy intensity shower rain")
-      document.getElementById("img").src = "09d.svg";
-    if(data.weather[0].description === "ragged shower rain")
-      document.getElementById("img").src = "09d.svg";
+      document.getElementById("img").src = "light_rain.svg";
   }
+    
 }
 
