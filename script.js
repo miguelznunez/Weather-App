@@ -16,7 +16,7 @@ function loadWeather(){
     if(response.ok)
       return response.json();
     else
-      alert('Error: ' + response.status + '\nTry to enter your city and full state name, for example, San Franscisco, California.');
+      alert('Error: ' + response.status + '\n\nIf your in the U.S.try to enter your city and full state name, for example, San Franscisco, California. Otherwise, you can enter your city and country name, for example, Hong Kong, Japan');
   })
 
   .then(function(data){ 
