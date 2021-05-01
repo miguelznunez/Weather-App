@@ -126,6 +126,7 @@ body{
   }
 
   .weather-details{
+    width:100%;
     flex-direction: column;
     margin-top: 5px;
   }
@@ -137,7 +138,7 @@ body{
 
   .weather-details p{
     display: block;
-    margin: 5px;
+    margin: 8px;
   }
 
   #bar{
