@@ -14,6 +14,7 @@ body{
   width: 1280px;
   height: 100vh;
   margin: auto;
+
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -56,28 +57,30 @@ body{
   width: 400px;
   height: 100vh;
   color: white;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.5);
   text-align: center;
-  padding-top: 20px;
+  padding-top: 25px;
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
 }
 
 #slider input{
   padding: 8px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   width: 60%;
-  border: 1px solid lightgray;
+  border: 1px solid white;
 }
 
 #slider button{
   padding: 8px;
   cursor: pointer;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   width: fit-content;
-  border: 1px solid lightgray;
+  border: 1px solid transparent;
+  color: #66c2ff;
+  background-color: white;
 }
 
 #slider h3{
