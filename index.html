@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Weather App</title>
 </head>
 <body>
    
-    <div class="container-1">
+  
+  <div class="container">
     <div class="weather-img">
-      <img id="img" src="">
+      <img id="img">
     </div>
     <div class="weather-details">
       <h1><span id="degrees"></span><span style="font-size: 1rem;margin-top: -10px;"></span></h1>
@@ -20,17 +21,14 @@
       <h1 id="city-name"></h1>
       <p id='description'></p>
     </div>
-  </div>
-  
-  <div class="container-2">
-    <div class="arrow">
-      <i class="fas fa-chevron-down"></i>
-    </div>
-    <div class="input-box">
-      <input id="city-state" type="text" placeholder="City, State"><button onclick="loadWeather()">Search</button>
+    <div id="slider" class="slide-in">
+      <h3>Search weather</h3>
+      <br>
+      <input id="input" type="text" placeholder="City, State"><button id="searchWeather">Search</button>
     </div>
   </div>
-  
+
+  <button id="toggle" style="position:absolute; top: 0;border: 1px solid lightgray;padding: 8px;cursor: pointer;border-radius: 5px;background-color: transparent;color: lightgray;">Toggle</button>
 
   <script src="script.js"></script>
 </body>
