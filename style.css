@@ -10,24 +10,19 @@ body{
   font-family: 'Comfortaa', cursive;
 }
 
-.container{
+.container{ 
   width: 1280px;
-  height: 100vh;
   margin: auto;
-
+  height: 100vh;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.weather-img{
-  width: 200px;
-}
+.weather-img{width: 200px;}
 
-.weather-img img{
-  width: 100%;
-}
+.weather-img img{width: 100%;}
 
 .weather-details{
   display: flex;
@@ -47,8 +42,30 @@ body{
   color: white;
 }
 
+#img{opacity: 0;}
+
+#degrees{opacity: 0;}
+
 #bar{
   display: block;
+  opacity: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#city-name{opacity: 0;}
+
+#description{opacity: 0;}
+
+#toggle{
+  position:absolute;
+  top: 0;
+  border: 1px solid lightgray;
+  padding: 8px;
+  cursor: pointer;
+  outline:none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: lightgray;
 }
 
 #slider {
@@ -83,9 +100,7 @@ body{
   background-color: white;
 }
 
-#slider h3{
-  font-size: 1.2rem;
-}
+#slider h3{font-size: 1.2rem;}
 
 .slide-in {
     animation: slide-in 0.5s forwards;
@@ -115,6 +130,11 @@ body{
     100% { -webkit-transform: translateX(-100%); }
 }
 
+.animatee {
+  opacity: 1 !important;
+  transition: opacity 1.6s ease 0s;
+}
+
 @media(max-width:1280px){
   .container{ width: 95%; }
 }
@@ -125,13 +145,9 @@ body{
     flex-direction: column;
   }
 
-  #slider {
-    width: 300px;
-  }
+  #slider {width: 300px;}
 
-  .weather-img{
-    height: 150px;
-  }
+  .weather-img{height: 150px;}
 
   .weather-details{
     width: 100%;
@@ -149,9 +165,7 @@ body{
     margin: 8px;
   }
 
-  #bar{
-    display: none;
-  }
+  #bar{display: none;}
 
 }
 
@@ -160,21 +174,13 @@ body{
     font-size: 6.8vw;
   }
 
-  .input-box{
-    width: 100%;
-  }
+  .input-box{width: 100%;}
 
-  .input-box input{
-    width: 60%;
-  }
+  .input-box input{width: 60%;}
 
-  .arrow{
-    font-size: 1rem;
-  }
+  .arrow{font-size: 1rem;}
 }
 
 @media(max-width:320px){
-  .weather-details h1{
-    font-size: 5.5vw;
-  }
+  .weather-details h1{font-size: 5.5vw;}
 }
