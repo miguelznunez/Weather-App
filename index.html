@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="weather.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Weather App</title>
@@ -15,8 +16,8 @@
       <img id="img">
     </div>
     <div class="weather-details">
-      <h1><span id="degrees"></span><span style="font-size: 1rem;margin-top: -10px;"></span></h1>
-      <h1 id= "bar" style="color: rgba(255, 255, 255, 0.6)"> | </h1>
+      <h1><span id="degrees"></span></h1>
+      <h1 id= "bar"></h1>
       <h1 id="city-name"></h1>
       <p id='description'></p>
     </div>
@@ -27,7 +28,7 @@
     </div>
   </div>
 
-  <button id="toggle" style="position:absolute; top: 0;border: 1px solid lightgray;padding: 8px;cursor: pointer;border-radius: 5px;background-color: transparent;color: lightgray;outline:none;"><i class="fas fa-search"></i></button>
+  <button id="toggle"><i class="fas fa-search"></i></button>
 
   <script src="script.js"></script>
 </body>
