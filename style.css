@@ -10,7 +10,7 @@ body{
   font-family: 'Comfortaa', cursive;
 }
 
-.container{ 
+main{ 
   width: 1280px;
   margin: auto;
   height: 100vh;
@@ -20,11 +20,11 @@ body{
   align-items: center;
 }
 
-.weather-img{width: 200px;}
+#weather-img{width: 200px;}
 
-.weather-img img{width: 100%;}
+#weather-img img{width: 100%;}
 
-.weather-details{
+#weather-details{
   display: flex;
   justify-content: space-between;
   width: fit-content;
@@ -32,12 +32,12 @@ body{
   user-select: none;
 }
 
-.weather-details h1{
+#weather-details h1{
   font-size: 4rem;
   padding: 0 10px;
 }
 
-.weather-details p{
+#weather-details p{
   display: none;
   color: white;
 }
@@ -136,31 +136,31 @@ body{
 }
 
 @media(max-width:1280px){
-  .container{ width: 95%; }
+  main{ width: 95%; }
 }
 
 @media(max-width: 768px){
-  .container{
+  main{
     text-align: center;
     flex-direction: column;
   }
 
   #slider {width: 300px;}
 
-  .weather-img{height: 150px;}
+  #weather-img{height: 150px;}
 
-  .weather-details{
+  #weather-details{
     width: 100%;
     flex-direction: column;
     margin-top: 5px;
   }
 
-  .weather-details h1{
+  #weather-details h1{
     font-size: 7.5vw;
     margin: 5px;
   }
 
-  .weather-details p{
+  #weather-details p{
     display: block;
     margin: 8px;
   }
@@ -169,18 +169,8 @@ body{
 
 }
 
-@media(max-width:480px){  
-  .weather-details-1 h1{
-    font-size: 6.8vw;
-  }
+@media(max-width:480px){
+  #slider {width: 225px;}
 
-  .input-box{width: 100%;}
-
-  .input-box input{width: 60%;}
-
-  .arrow{font-size: 1rem;}
-}
-
-@media(max-width:320px){
-  .weather-details h1{font-size: 5.5vw;}
+  #slider h3{font-size: 1rem;}
 }
