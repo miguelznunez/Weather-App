@@ -6,27 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/png" href="weather.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <title>Weather App</title>
 </head>
 <body>
   
-  <div class="container">
-    <div class="weather-img">
+  <main>
+    <div id="weather-img">
       <img id="img">
     </div>
-    <div class="weather-details">
+    <div id="weather-details">
       <h1><span id="degrees"></span></h1>
       <h1 id= "bar"></h1>
       <h1 id="city-name"></h1>
       <p id='description'></p>
     </div>
-    <div id="slider" class="slide-in">
+    <div class="slide-in" id="slider">
       <h3>Search weather</h3>
       <br>
-      <input id="input" type="text" placeholder="City, State"><button id="searchWeather"><i class="fas fa-search" id="searchWeather"></i></button>
+      <input id="input" type="text" placeholder="City, State"><button type="submit" id="searchWeather"><i class="fas fa-search"
+          id="searchWeather"></i></button>
+      <br><br>
+      <span id="isValid"></span>
     </div>
-  </div>
+  </main>
 
   <button id="toggle"><i class="fas fa-search"></i></button>
 
