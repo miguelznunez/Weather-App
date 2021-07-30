@@ -1,4 +1,4 @@
-const slider = document.getElementById("slider");
+const slider = document.querySelector("#slider");
 
 // Toggle functionality
 document.querySelector("#toggle").addEventListener("click", () => {
