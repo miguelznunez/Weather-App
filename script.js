@@ -1,9 +1,9 @@
-const slider = document.getElementById('slider');
+const slider = document.getElementById("slider");
 
 // Toggle functionality
-document.querySelector("#toggle").addEventListener('click', () => {
-    let isOpen = slider.classList.contains('slide-in');
-    slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in');
+document.querySelector("#toggle").addEventListener("click", () => {
+    let isOpen = slider.classList.contains("slide-in");
+    slider.setAttribute("class", isOpen ? "slide-out" : "slide-in");
 });
 
 // Load day or night mode
@@ -12,9 +12,9 @@ dayNightMode = () => {
   let hour = date.getHours();
 
   if(hour >= 7 && hour < 19)
-    document.body.style.background = 'linear-gradient(0.50turn, white, #33adff, white)';
+    document.body.style.background = "linear-gradient(0.50turn, white, #33adff, white)";
   else
-    document.body.style.background = 'linear-gradient(0.50turn, black, #33adff, black)';
+    document.body.style.background = "linear-gradient(0.50turn, black, #33adff, black)";
 }
 
 window.addEventListener('load', dayNightMode);
@@ -33,7 +33,7 @@ document.querySelector("#input").addEventListener("keydown", (event) => {
 
 // Load default weather location
 defaultWeather = () => {
-  loadWeather('San Francisco, California');
+  loadWeather("San Francisco, California");
 };
 
 window.addEventListener('load', defaultWeather);
