@@ -1,8 +1,7 @@
 const slider = document.getElementById('slider');
-const toggle = document.getElementById('toggle');
 
 // Toggle functionality
-toggle.addEventListener('click', () => {
+document.querySelector("#toggle").addEventListener('click', () => {
     let isOpen = slider.classList.contains('slide-in');
     slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in');
 });
@@ -21,13 +20,13 @@ dayNightMode = () => {
 window.addEventListener('load', dayNightMode);
 
 // Event listener for searching the weather on "click" of the button
-document.getElementById("searchWeather").addEventListener("click", () => {
-  const input = document.getElementById('input');
+document.querySelector("#searchWeather").addEventListener("click", () => {
+  const input = document.querySelector("#input");
     loadWeather(input.value);
 });
 
 // Event listener for searching the weather on "keydown" of the enter key
-document.getElementById("input").addEventListener("keydown", (event) => {
+document.querySelector("#input").addEventListener("keydown", (event) => {
   if(event.key === "Enter")
     loadWeather(input.value);
 });
@@ -124,3 +123,4 @@ setImage = (data) => {
       querySelector("#img").src = "light_rain.svg";
   }    
 }
+
