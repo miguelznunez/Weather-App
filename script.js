@@ -16,8 +16,16 @@ document.querySelector("#searchWeather").addEventListener("click", () => {
     loadWeather(city.value, state.value);
 });
 
+// Load default weather location
+defaultWeather = () => {
+  loadWeather("San Francisco", "California");
+};
+
+window.addEventListener('load', defaultWeather);
+
 // Request to the weather API
 loadWeather = (city, state) => {
+
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&units=metric&appid=16a2314e91b166c8c3c5b3c33539f22b`;
     
   fetch(url)
@@ -28,8 +36,8 @@ loadWeather = (city, state) => {
    })
 
    .then(data => {
-      document.querySelector("#isValid").textContent = "";
       displayWeather(data);
+      document.querySelector("#isValid").textContent = "";
    })
    
    .catch(error => document.querySelector("#isValid").textContent = error);
@@ -118,22 +126,15 @@ async function loadStates(){
   });
 };
 
-// Load default weather location
-defaultWeather = () => {
-  loadWeather("San Francisco", "California");
-};
+// // Load day or night mode
+// dayNightMode = () => {
+//   let date = new Date();
+//   let hour = date.getHours();
 
-window.addEventListener('load', defaultWeather);
-
-// Load day or night mode
-dayNightMode = () => {
-  let date = new Date();
-  let hour = date.getHours();
-
-  if(hour >= 7 && hour < 19)
-    document.body.style.background = "linear-gradient(0.50turn, white, #33adff, white)";
-  else
-    document.body.style.background = "linear-gradient(0.50turn, black, #33adff, black)";
-}
+//   if(hour >= 7 && hour < 19)
+//     document.body.style.background = "linear-gradient(0.50turn, white, #33adff, white)";
+//   else
+//     document.body.style.background = "linear-gradient(0.50turn, black, #33adff, black)";
+// }
 
 // window.addEventListener('load', dayNightMode);
