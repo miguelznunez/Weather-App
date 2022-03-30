@@ -6,41 +6,19 @@ document.querySelector("#toggle").addEventListener("click", () => {
     slider.setAttribute("class", isOpen ? "slide-out" : "slide-in");
 });
 
-// Load day or night mode
-dayNightMode = () => {
-  let date = new Date();
-  let hour = date.getHours();
-
-  if(hour >= 7 && hour < 19)
-    document.body.style.background = "linear-gradient(0.50turn, white, #33adff, white)";
-  else
-    document.body.style.background = "linear-gradient(0.50turn, black, #33adff, black)";
-}
-
-window.addEventListener('load', dayNightMode);
-
 // Event listener for searching the weather on "click" of the button
 document.querySelector("#searchWeather").addEventListener("click", () => {
-  const input = document.querySelector("#input");
-    loadWeather(input.value);
+  const city = document.querySelector("#city");
+  const state = document.querySelector("#state");
+  if(city.value === "" || state.value === "")
+    document.querySelector("#isValid").textContent = "Input fields cannot be empty";
+  else
+    loadWeather(city.value, state.value);
 });
-
-// Event listener for searching the weather on "keydown" of the enter key
-document.querySelector("#input").addEventListener("keydown", (event) => {
-  if(event.key === "Enter")
-    loadWeather(input.value);
-});
-
-// Load default weather location
-defaultWeather = () => {
-  loadWeather("San Francisco, California");
-};
-
-window.addEventListener('load', defaultWeather);
 
 // Request to the weather API
-loadWeather = (input) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=16a2314e91b166c8c3c5b3c33539f22b`;
+loadWeather = (city, state) => {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&units=metric&appid=16a2314e91b166c8c3c5b3c33539f22b`;
     
   fetch(url)
 
@@ -81,7 +59,8 @@ displayWeather = (data) => {
     document.querySelector("#description").classList.add("animatee");
   }, 300);
 
-  document.querySelector("#input").value = '';
+  document.querySelector("#city").value = "";
+  document.querySelector("#state").value = "State";
 }
 
 // Set the weather image
@@ -124,3 +103,37 @@ setImage = (data) => {
   }    
 }
 
+// Load states
+window.addEventListener("load", loadStates);
+
+async function loadStates(){
+  let url = "https://cst336.herokuapp.com/projects/api/state_abbrAPI.php";
+  let response = await fetch(url);
+  let data = await response.json();
+  data.forEach( function(i){ 
+    var state = document.createElement("option");
+    state.textContent = i.state;
+    state.value = i.state;
+    document.querySelector("#state").appendChild(state);
+  });
+};
+
+// Load default weather location
+defaultWeather = () => {
+  loadWeather("San Francisco", "California");
+};
+
+window.addEventListener('load', defaultWeather);
+
+// Load day or night mode
+dayNightMode = () => {
+  let date = new Date();
+  let hour = date.getHours();
+
+  if(hour >= 7 && hour < 19)
+    document.body.style.background = "linear-gradient(0.50turn, white, #33adff, white)";
+  else
+    document.body.style.background = "linear-gradient(0.50turn, black, #33adff, black)";
+}
+
+// window.addEventListener('load', dayNightMode);
