@@ -14,7 +14,7 @@
 </head>
 <body>
   
-  <main>
+    <main>
     <div id="weather-img">
       <img id="img">
     </div>
@@ -25,15 +25,15 @@
       <p id='description'></p>
     </div>
     <div class="slide-in" id="slider">
-      <h3>Search weather</h3>
-      <br>
-      <input id="input" type="text" placeholder="City, State"><button type="submit" id="searchWeather"><i class="fas fa-search"
-          id="searchWeather"></i></button>
-      <br><br>
+      <h3>Search Weather</h3>
+      <input id="city" type="text" placeholder="City">
+      <select name="state" id="state">
+        <option style="color:gray">State</option>
+      </select>
+      <button type="submit" id="searchWeather"><i class="fas fa-search" id="searchWeather"></i> Search</button>
       <span id="isValid"></span>
     </div>
   </main>
-
   <button id="toggle"><i class="fas fa-search"></i></button>
 
   <script src="script.js"></script>
